@@ -57,7 +57,7 @@ functionality | method | endpoint
 [Register](#register) | POST | `/api/v1/register`
 [Log in and Authenticate](#login) | POST | `/api/v1/login`
 [Forgot password](#forgot_password) | POST | `/api/v1/forgot-password`
-[Reset password](reset_password) | POST | `/api/v1/reset-password/:reset_token`
+[Reset password](#reset_password) | POST | `/api/v1/reset-password/:reset_token`
 
 ### User Enpoints
 
