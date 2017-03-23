@@ -57,6 +57,9 @@ functionality | method | endpoint
 [Register](#register) | POST | `/api/v1/register`
 [Log in and Authenticate](#login) | POST | `/api/v1/login`
 
+### User Enpoints
+
+TODO
 
 
 <a name="register"></a>
