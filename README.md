@@ -228,6 +228,13 @@ Just run the following command
 $ npm run test
 ```
 
+## DOCUMENTATION ##
+
+We included apidoc to generate documentation for our API. Just run the following command and open `index.html` in apidoc folder.
+```sh
+$ npm run apidoc
+```
+
 ## TODOS ##
  
 - send email after registration
