@@ -195,7 +195,7 @@ PUT /api/v1/user
 ```` JSON
 {
 	"success" : true,
-	"user" : {email: "new@email.com", username: "newUsername"},
+	"user" : {"email": "new@email.com", "username": "newUsername"},
 }
 ````
 
