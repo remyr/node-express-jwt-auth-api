@@ -240,3 +240,4 @@ $ npm run apidoc
 - send email after registration
 - add config for email parameters 
 - add config to enable/disable email sending
+- add errors response to documentation
