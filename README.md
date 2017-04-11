@@ -237,7 +237,7 @@ $ npm run apidoc
 
 ## TODOS ##
  
-- add unique constraint to user
+- ~~add unique constraint to user~~
 - send email after registration
 - add config for email parameters 
 - add config to enable/disable email sending
