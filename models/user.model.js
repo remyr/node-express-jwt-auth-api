@@ -1,5 +1,7 @@
 let mongoose = require('mongoose');
 let bcrypt = require('bcrypt');
+let uniqueValidator = require('mongoose-unique-validator');
+
 let Validators = require('../utils/validators');
 
 mongoose.Promise = global.Promise;
@@ -8,7 +10,8 @@ let UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: [true, 'Field email is required'],
-        validate: [Validators.emailValidator, 'Please fill a valid email address']
+        validate: [Validators.emailValidator, 'Please fill a valid email address'],
+        unique: [true, 'This email address already exist'],
     },
     password: {
         type: String,
@@ -38,5 +41,7 @@ UserSchema.methods.comparePassword = function(password, callback) {
         callback(null, isMatch)
     })
 };
+
+UserSchema.plugin(uniqueValidator, { message: 'This {PATH} already exist.' });
 
 module.exports = mongoose.model('User', UserSchema);
