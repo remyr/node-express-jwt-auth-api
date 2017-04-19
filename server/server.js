@@ -14,7 +14,7 @@ let usersRoutes = require('../routes/users.routes');
 
 /* APP USE */
 app.use(bodyParser.json());
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 app.use(passport.initialize());
@@ -36,5 +36,9 @@ let authMiddleware = function(req, res, next) {
 app.use('/api/v1', authRoutes);
 /* USERS ROUTES */
 app.use('/api/v1/user', authMiddleware, usersRoutes);
+
+app.get('/', (req, res) => {
+    res.json({env: process.env})
+});
 
 module.exports = app;
